@@ -1,0 +1,41 @@
+.head-container {
+  // border: 1px solid blue;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  .front, .front-collapse {
+    text-align: center;
+    color: beige;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .front {
+    flex: 0 0 200px;
+    // border: 1px solid red;
+  }
+
+  .front-collapse {
+    flex: 0 0 80px;
+  }
+
+  .middle {
+    flex: 1 0 auto;
+    font-size: 1.3rem;
+    // border: 1px solid red;
+    padding-left: 20px;
+  }
+
+  .end {
+    flex: 0 0 160px;
+    // border: 1px solid blue;
+    border-left: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
