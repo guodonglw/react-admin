@@ -2,23 +2,24 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined
 } from '@ant-design/icons'
-import store from '@/redux/store.js'
 import React from 'react'
-import {connect} from 'react-redux'
+import { useDispatch, useSelector} from 'react-redux'
 import { sidebarCollapseCreator } from '@/redux/SideBar.js'
 import { updateName } from '@/redux/App.js'
 import './index.less'
 import { Avatar, Popover } from 'antd'
 
-const HeadBar = (props) => {
-  const {collapse, name} = props
+const HeadBar = () => {
+  const collapse = useSelector(state => state.SideBar.collapse)
+  const name = useSelector(state => state.App.name)
+  const dispatch = useDispatch()
   // 折叠侧边栏
   const toggle = () => {
-    store.dispatch(sidebarCollapseCreator())
+    dispatch(sidebarCollapseCreator())
   }
   // 修改名称
   const changeName = () => {
-    store.dispatch(updateName('哈哈哈'))
+    dispatch(updateName('哈哈哈'))
   }
   return (
     <div className='head-container'>
@@ -51,11 +52,4 @@ const HeadBar = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    ...state.SideBar,
-    ...state.App
-  }
-}
-
-export default connect(mapStateToProps)(HeadBar)
+export default HeadBar

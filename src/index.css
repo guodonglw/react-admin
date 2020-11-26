@@ -21,3 +21,70 @@ body {
 #root {
   height: 100%;
 }
+
+// 各种margin
+.margin-left-ten {
+  margin-left: 10px;
+}
+
+.margin-left-twenty {
+  margin-left: 20px;
+}
+
+.margin-left-thirty {
+  margin-left: 30px;
+}
+
+.margin-right-ten {
+  margin-right: 10px;
+}
+
+.margin-right-twenty {
+  margin-right: 20px;
+}
+
+.margin-right-thirty {
+  margin-right: 30px;
+}
+
+.margin-top-ten {
+  margin-top: 10px;
+}
+
+.margin-top-twenty {
+  margin-top: 20px;
+}
+
+.margin-top-thirty {
+  margin-top: 30px;
+}
+
+.margin-top-fourty {
+  margin-top: 40px;
+}
+
+.margin-top-fifty {
+  margin-top: 50px;
+}
+
+.margin-bottom-ten {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-twenty {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-thirty {
+  margin-bottom: 30px;
+}
+
+.margin-bottom-fourty {
+  margin-bottom: 40px;
+}
+
+.margin-bottom-fifty {
+  margin-bottom: 50px;
+}
+
+
