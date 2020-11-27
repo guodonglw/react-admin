@@ -7,6 +7,7 @@ import PieChart from './components/PieChart'
 import RaddarChart from './components/RaddarChart'
 import MyCarousel from './components/MyCarousel'
 import MyTable from './components/MyTable'
+import MapChart from './components/MapChart'
 
 const info = [{
   label: '新增数据',
@@ -44,6 +45,13 @@ const DashBoard = () => {
           )
         })}
       </Row>
+
+      {/* 第四部分 */}
+      <Row className='row-item margin-top-thirty' gutter={16} style={style}>
+        <Col span={24} className='part-four-item' style={{paddingLeft: '0', paddingRight: '0'}}>
+          <MapChart />
+        </Col>
+      </Row>
       
       {/* 第二部分 */}
       <Row className='row-item margin-top-thirty' gutter={16} style={style}>
@@ -67,6 +75,7 @@ const DashBoard = () => {
           <MyTable />
         </Col>
       </Row>
+
     </Layout>
   )
 }
