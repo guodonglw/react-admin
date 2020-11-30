@@ -8,6 +8,8 @@ import {useSelector} from 'react-redux'
 import {Route, Redirect} from 'react-router-dom'
 import Test from '@/components/Test/index'
 import DashBoard from '@/pages/DashBoard'
+import BaseTable from '@/pages/Table/BaseTable'
+
 
 const { Header, Sider,  Content } = Layout
 
@@ -28,8 +30,11 @@ function App() {
         {/* 实际内容 */}
         <Content className='content-container'>
           <Layout className='content-layout'>
+            {/* 首页 */}
             <Route path='/app/dashboard/index' component={DashBoard}></Route>
             <Route path='/app/ui/buttons' component={Test}></Route>
+            {/* 表格 */}
+            <Route path='/app/table/basicTable' component={BaseTable}/>
           </Layout>
         </Content>
       </Layout>

@@ -2,12 +2,19 @@ import {
   AppstoreOutlined,
   PieChartOutlined,
   DesktopOutlined,
-  ContainerOutlined,
-  MailOutlined,
+  ContainerOutlined
 } from '@ant-design/icons'
 const menus = [
   // 菜单相关路由
   { key: '/app/dashboard/index', title: '首页', icon: <AppstoreOutlined />, component: 'Dashboard' },
+  {
+    key: '/app/table',
+    title: '表格',
+    icon: <PieChartOutlined />,
+    subs: [
+      { key: '/app/table/basicTable', title: '基础表格', component: 'BasicTable' }
+    ],
+  },
   {
     key: '/app/ui',
     title: 'UI',
@@ -24,37 +31,6 @@ const menus = [
       { key: '/app/ui/drags', title: '拖拽', component: 'Drags' },
       { key: '/app/ui/gallery', title: '画廊', component: 'Gallery' },
       { key: '/app/ui/map', title: '地图', component: 'MapUi' },
-    ],
-  },
-  {
-    key: '/app/animation',
-    title: '动画',
-    icon: <MailOutlined />,
-    subs: [
-      {
-        key: '/app/animation/basicAnimations',
-        title: '基础动画',
-        component: 'BasicAnimations',
-      },
-      {
-        key: '/app/animation/exampleAnimations',
-        title: '动画案例',
-        component: 'ExampleAnimations',
-      },
-    ],
-  },
-  {
-    key: '/app/table',
-    title: '表格',
-    icon: <PieChartOutlined />,
-    subs: [
-      { key: '/app/table/basicTable', title: '基础表格', component: 'BasicTable' },
-      { key: '/app/table/advancedTable', title: '高级表格', component: 'AdvancedTable' },
-      {
-        key: '/app/table/asynchronousTable',
-        title: '异步表格',
-        component: 'AsynchronousTable',
-      },
     ],
   },
   {
